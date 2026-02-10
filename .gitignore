@@ -1,0 +1,96 @@
+# =========================
+# .NET / C#
+# =========================
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.cache
+*.log
+
+# =========================
+# Visual Studio
+# =========================
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+
+# =========================
+# Build / Publish
+# =========================
+artifacts/
+publish/
+out/
+
+# =========================
+# NuGet
+# =========================
+packages/
+*.nupkg
+*.snupkg
+.nuget/
+
+# =========================
+# EF Core
+# =========================
+**/Migrations/*.cs
+**/Migrations/*.Designer.cs
+**/Migrations/*.resx
+
+# Se você quiser versionar migrations, COMENTE o bloco acima
+
+# =========================
+# App settings (segredos)
+# =========================
+appsettings.*.json
+!appsettings.json
+
+# Se preferir:
+# appsettings.Development.json
+# appsettings.Production.json
+
+# =========================
+# Environment / Secrets
+# =========================
+.env
+.env.*
+secrets.json
+
+# =========================
+# Docker
+# =========================
+docker/**/*.env
+**/docker-compose.override.yml
+
+# =========================
+# Logs
+# =========================
+logs/
+*.log
+
+# =========================
+# OS
+# =========================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# =========================
+# Test results
+# =========================
+TestResults/
+
+# =========================
+# Misc
+# =========================
+*.swp
+*.tmp
+*.bak
