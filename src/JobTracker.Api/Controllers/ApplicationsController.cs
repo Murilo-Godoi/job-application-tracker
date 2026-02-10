@@ -3,11 +3,13 @@ using JobTracker.Application.UseCases.JobApplications;
 using JobTracker.Domain.Enums;
 using Microsoft.AspNetCore.Mvc;
 
+namespace JobTracker.Api.Controllers;
 
 [ApiController]
 [Route("job-applications")]
 public sealed class ApplicationsController : ControllerBase
 {
+    // TODO: organizar rotas em arquivo separado
     [HttpPost]
     public async Task<IActionResult> Create([FromBody] CreateApplicationDto dto, [FromServices] CreateApplication uc, CancellationToken ct)
     {
@@ -15,7 +17,6 @@ public sealed class ApplicationsController : ControllerBase
         return CreatedAtAction(nameof(CreateApplication), new { id }, new { id });
     }
 
-    // TODO: organizar rotas em arquivo separado
     [HttpPatch("{id:guid}/status")]
     public async Task<IActionResult> ChangeStatus(Guid id, [FromBody] ChangeStatusDto dto, [FromServices] ChangeStatus uc, CancellationToken ct)
     {

@@ -1,5 +1,4 @@
-using JobTracker.Application.UseCases.Dashboard;
-using JobTracker.Application.UseCases.JobApplications;
+using JobTracker.Application;
 using JobTracker.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,14 +7,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// TODO: remover daqui
-builder.Services.AddScoped<CreateApplication>();
-builder.Services.AddScoped<ChangeStatus>();
-builder.Services.AddScoped<ListApplications>();
-builder.Services.AddScoped<GetApplicationById>();
-builder.Services.AddScoped<GetDashboardSummary>();
-
-
+builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration);
 
 var app = builder.Build();

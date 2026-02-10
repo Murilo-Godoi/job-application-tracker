@@ -1,6 +1,8 @@
 using JobTracker.Application.UseCases.Dashboard;
 using Microsoft.AspNetCore.Mvc;
 
+namespace JobTracker.Api.Controllers;
+
 [ApiController]
 [Route("dashboard")]
 public sealed class DashboardController : ControllerBase
