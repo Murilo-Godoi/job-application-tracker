@@ -1,4 +1,5 @@
 ﻿using JobTracker.Application.Interfaces;
+using JobTracker.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -14,10 +15,10 @@ public static class DependencyInjection
         services.AddDbContext<AppDbContext>(opt =>
             opt.UseNpgsql(conn));
 
-        //services.AddScoped<IApplicationRepository, ApplicationRepository>();
+        services.AddScoped<IApplicationRepository, ApplicationRepository>();
         //services.AddScoped<IContactRepository, ContactRepository>();
-        //services.AddScoped<IFollowUpRepository, FollowUpRepository>();
-        //services.AddScoped<IUnitOfWork, UnitOfWork>();
+        services.AddScoped<IFollowUpRepository, FollowUpRepository>();
+        services.AddScoped<IUnitOfWork, UnitOfWork>();
 
         services.AddSingleton<IClock,SystemClock>();
 

@@ -20,4 +20,8 @@
     <ProjectReference Include="..\JobTracker.Infrastructure\JobTracker.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
 </Project>
