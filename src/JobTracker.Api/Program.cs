@@ -10,6 +10,8 @@ builder.Services.AddSwaggerGen();
 // TODO: remover daqui
 builder.Services.AddScoped<CreateApplication>();
 builder.Services.AddScoped<ChangeStatus>();
+builder.Services.AddScoped<ListApplications>();
+builder.Services.AddScoped<GetApplicationById>();
 
 
 builder.Services.AddInfrastructure(builder.Configuration);
