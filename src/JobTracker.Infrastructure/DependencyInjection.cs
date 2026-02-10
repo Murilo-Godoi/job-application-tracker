@@ -22,6 +22,8 @@ public static class DependencyInjection
 
         services.AddSingleton<IClock,SystemClock>();
 
+        services.AddScoped<IDashboardRepository, DashboardRepository>();
+
         return services;
     }
 }

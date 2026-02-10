@@ -1,3 +1,4 @@
+using JobTracker.Application.UseCases.Dashboard;
 using JobTracker.Application.UseCases.JobApplications;
 using JobTracker.Infrastructure;
 
@@ -12,6 +13,7 @@ builder.Services.AddScoped<CreateApplication>();
 builder.Services.AddScoped<ChangeStatus>();
 builder.Services.AddScoped<ListApplications>();
 builder.Services.AddScoped<GetApplicationById>();
+builder.Services.AddScoped<GetDashboardSummary>();
 
 
 builder.Services.AddInfrastructure(builder.Configuration);

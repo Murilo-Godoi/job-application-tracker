@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using JobTracker.Application.Dtos.Dashboard;
 
-namespace JobTracker.Application.Interfaces
+namespace JobTracker.Application.Interfaces;
+
+public interface IDashboardRepository
 {
-    internal interface IDashboardRepository
-    {
-    }
+    Task<IReadOnlyList<StatusCountDto>> GetStatusCounts(CancellationToken ct);
+
+    Task<IReadOnlyList<UpcomingFollowUpDto>> GetUpcomingFollowUps(DateTime fromUtc, DateTime toUtc, int take, CancellationToken ct);
 }
